@@ -1,0 +1,58 @@
+.page-header
+  width: 100%
+  height: calc( 100vh - 80px )
+  margin-top: var(--nav-height)
+  background-color: $purple
+  display: flex
+
+.page-header__wrap-content
+  display: flex
+  justify-content: space-between
+  margin: auto 0
+
+.page-header__item
+  width: 48%
+
+.page-header__image
+  width: 100%
+
+.intro
+  justify-content: center
+
+.intro__title
+  color: $grey
+  @include semiBorderTop($white)
+
+.intro__text
+  margin-bottom: 30px
+  color: $grey
+
+@media only screen and (max-height: 1000px)
+  .page-header__wrap-content
+    margin: unset
+    padding-top: 130px
+
+@media only screen and (min-width: 1000px)
+  .page-header
+    @include wrapper
+
+@media only screen and (max-width: 1000px)
+  .page-header
+    height: unset
+
+  .page-header__wrap-content
+    flex-direction: column-reverse
+    align-items: center
+    padding-top: 0
+
+  .page-header__item
+    width: 100%
+
+  .intro
+    padding-top: 20px
+    padding-bottom: 70px
+    text-align: center
+    @include wrapper
+
+  .intro__title:before
+    display: none

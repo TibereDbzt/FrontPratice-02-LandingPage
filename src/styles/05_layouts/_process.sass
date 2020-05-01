@@ -1,0 +1,26 @@
+.process
+  margin-bottom: 70px
+  margin-bottom: 100px
+  padding: 40px 70px
+  background-color: $purple
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@media only screen and (min-width: 1200px)
+  .process
+    margin-left: calc(50% - var(--container) / 2)
+    margin-right: calc(50% - var(--container) / 2)
+
+@media only screen and (max-width: 850px)
+  .process
+    flex-direction: column
+
+  .process__title
+    text-align: center
+    margin-top: 0
+    margin-bottom: 40px
+
+@media only screen and (max-width: 700px)
+  .process
+    @include wrapper

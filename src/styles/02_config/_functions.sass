@@ -1,0 +1,16 @@
+@mixin semiBorderTop($color)
+  &::before
+      display: block
+      content: ''
+      width: 160px
+      height: 1px
+      position: absolute
+      top: 0
+      left: 0
+      background-color: $color
+
+@mixin wrapper
+  width: 100%
+  box-sizing: border-box
+  padding-left: calc(50% - var(--container) / 2)
+  padding-right: calc(50% - var(--container) / 2)

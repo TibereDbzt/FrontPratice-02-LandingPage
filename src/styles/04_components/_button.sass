@@ -1,0 +1,32 @@
+.btn
+  box-sizing: border-box
+  width: fit-content
+  padding: 9px 23px
+  font-weight: 700
+  border: 2px solid
+  text-transform: uppercase
+  background: none
+  cursor: pointer
+  background-size: 100% 200%
+  transition: background-position 0.5s ease, color 0.5s ease
+
+.btn--dark
+  color: $purple-dark
+  border-color: $purple-dark
+  background-image: linear-gradient(to bottom, $white 50%, $purple-dark 50%)
+
+  &:hover
+    background-position: 0 100%
+    color: $white
+
+.btn--light
+  color: $white
+  border-color: $white
+  background-image: linear-gradient(to bottom, transparent 50%, $white 50%)
+
+  &:hover
+    background-position: 0 100%
+    color: $purple-dark
+
+.btn--large
+  width: 90%

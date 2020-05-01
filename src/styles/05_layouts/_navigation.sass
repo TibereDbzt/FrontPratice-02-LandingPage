@@ -1,0 +1,77 @@
+.navigation
+  z-index: 2
+  height: var(--nav-height)
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: $white
+  box-shadow: 0 4px 20px #0000001c
+
+.menu__item
+  font-family: 'Karla'
+  font-weight: 700
+  display: inline
+  padding: 13px
+  text-transform: uppercase
+  color: $purple-grayish
+  cursor: pointer
+  transition: color 0.3s
+
+  &:hover
+    color: $purple-dark
+
+.menu__item:last-of-type
+  padding-right: 0
+
+.hamburger__container
+  display: none
+
+.mobile-menu
+  display: none
+
+.close-icon
+  display: none
+
+@media only screen and (max-width: 700px)
+  .mobile-menu
+    z-index: 1
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    transition: 0.5s ease
+    transform: translateY(-100%)
+    background-color: $purple-dark
+    display: flex
+    justify-content: center
+
+    &.open
+      transform: translateY(var(--nav-height))
+      height: calc( 100vh - var(--nav-height) )
+
+  .mobile-menu__container
+    width: 100%
+    margin: 30px 0
+    padding: 0 20px
+
+  .mobile-menu__item
+    display: block
+    width: 100%
+    display: flex
+    justify-content: center
+    box-sizing: border-box
+    font-size: 16px
+    color: $white
+
+    &:hover
+      color: $white
+
+  .desktop-menu
+    display: none
+
+  .hamburger__container
+    display: block

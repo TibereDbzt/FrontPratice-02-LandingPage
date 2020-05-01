@@ -1,0 +1,28 @@
+.features
+  padding-top: 300px
+  padding-bottom: 100px
+
+.features__title
+  @include semiBorderTop($blue)
+
+.features__container
+  margin-top: 100px
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  column-gap: 50px
+
+@media only screen and (max-width: 850px)
+  .features
+    padding-top: 150px
+
+  .features__container
+    grid-template-columns: 1fr
+    row-gap: 30px
+    margin-top: 80px
+
+  .features__title
+    text-align: center
+
+  .features__title::before
+    left: 50%
+    transform: translateX(-50%)
